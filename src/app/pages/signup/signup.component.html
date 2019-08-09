@@ -1,0 +1,34 @@
+<div class="header-container">
+    <div class="logo-container">
+        <img src="../../../assets/images/logo-q.png" alt="Req-logo" class="img-fluid">
+    </div>
+    <p class="page-detail">{{detailText}} </p>
+   
+        <form [formGroup]="signUpForm" class="form-body" (ngSubmit)="submitData(signUpForm.value)">
+                <div class="form-container">
+            <div class="form-group">
+                <label for="name">
+                    Name
+                </label>
+                <input type="text" class="form-control" name="name" formControlName="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    Email
+                </label>
+                <input type="text" class="form-control" name="email" formControlName="email" >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">
+                    Phone number
+                </label>
+                <input #phone type="text" class="form-control" name="phone" formControlName="phone" placeholder="Type a phone number">
+            </div></div>
+            <div class="btn-section">
+                <button type="submit" class="btn primary-btn" autofocus>Sign In</button>
+            </div>
+        </form>
+    
+</div>

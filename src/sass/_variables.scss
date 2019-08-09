@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'SF-Compact-Bold';
+    src: url("src/assets/fonts/SF-Compact-Display-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: 'SF-Compact-Regular';
+    src: url("src/assets/fonts/SF-Compact-Display-Regular.otf") format("opentype");
+}
+
+$regular-font: 'SF-Compact-Regular';
+$bold-font: 'SF-Compact-Bold';
+
+$color-black: #000;
+$color-white: #FFF;
+$color-grey: #444;
+$color-darkgrey: #171f27;
+$color-red: #F00;
+$color-lightgrey: #a3abb3;
+
+$header-imgpath: 'src/assets/images/header-img.png';  
