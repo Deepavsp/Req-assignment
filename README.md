@@ -1,3 +1,9 @@
+To run the application:
+1) Download the project and run 'npm install'
+2) Run 'ng serve --open' - This will open the application in http://localhost:4200/
+3) Install json-server and run db.json file 'json-server --watch db.json'
+
+
 # ReqAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
