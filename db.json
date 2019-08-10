@@ -1,19 +1,15 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Robert Williamson",
+      "phone": "9874561230"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "John Doe",
+      "email": "john@requantive.com",
+      "phone": "3232342311",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

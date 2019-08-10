@@ -6,13 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeComponent implements OnInit {
-  detailText = 'Limited to the San Francisco Bay Area -- Join our BETA!';
+export class WelcomeComponent {
 
   constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
 
   gotoSignUpPage() {
     this.router.navigate(['./signup']);

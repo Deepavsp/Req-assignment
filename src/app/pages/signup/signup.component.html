@@ -3,9 +3,9 @@
         <img src="../../../assets/images/logo-q.png" alt="Req-logo" class="img-fluid">
     </div>
     <p class="page-detail">{{detailText}} </p>
-   
-        <form [formGroup]="signUpForm" class="form-body" (ngSubmit)="submitData(signUpForm.value)">
-                <div class="form-container">
+
+    <form [formGroup]="signUpForm" class="form-body" (ngSubmit)="submitData(signUpForm.getRawValue())">
+        <div class="form-container">
             <div class="form-group">
                 <label for="name">
                     Name
@@ -17,18 +17,27 @@
                 <label for="email">
                     Email
                 </label>
-                <input type="text" class="form-control" name="email" formControlName="email" >
+                <input type="text" class="form-control" name="email" formControlName="email">
             </div>
 
             <div class="form-group">
                 <label for="phone">
                     Phone number
                 </label>
-                <input #phone type="text" class="form-control" name="phone" formControlName="phone" placeholder="Type a phone number">
-            </div></div>
-            <div class="btn-section">
-                <button type="submit" class="btn primary-btn" autofocus>Sign In</button>
+                <input [class.is-invalid]="signUpForm.get('phone').invalid && signUpForm.get('phone').touched" #phone
+                    type="text" id="phone" class="form-control" name="phone" formControlName="phone"
+                    placeholder="Type a phone number">
+                <div *ngIf="signUpForm.get('phone').invalid && signUpForm.get('phone').touched">
+                    <small *ngIf="signUpForm.get('phone').errors?.required" class="text-danger">Phone number is
+                        required.</small>
+                    <small *ngIf="signUpForm.get('phone').errors?.pattern" class="text-danger">Phone number is invalid
+                        (Please enter your 10 digit phone number).</small>
+                </div>
             </div>
-        </form>
-    
+        </div>
+        <div class="btn-section">
+            <button type="submit" class="btn primary-btn" [disabled]="!signUpForm.valid">Sign In</button>
+        </div>
+    </form>
+
 </div>
